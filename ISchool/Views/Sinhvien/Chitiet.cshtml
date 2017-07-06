@@ -1,0 +1,173 @@
+﻿@model ISchool.Models.Sinhvien
+
+@{
+    ViewBag.Title = "Chi tiết sinh viên";
+    Layout = "~/Views/Shared/MatrixAdmin/AdminLayout.cshtml";
+}
+<div id="content-header">
+    <div id="breadcrumb">
+        <a href="@Url.Action("Dashbroad","Home")" title="Go to Home" class="tip-bottom">
+            <i class="icon-home"></i>
+            Home
+        </a>
+        <a href="@Url.Action("DanhsachSinhvien","Sinhvien")">
+            Sinh viên
+        </a>
+        <a href="#" class="current">
+            Chi tiết
+        </a>
+    </div>
+</div>
+<div class="container-fluid">
+    <hr>
+
+    <div>
+        <h4>@Html.DisplayFor(model => model.HOSV) @Html.DisplayFor(model => model.TENSV)</h4>
+        <hr />
+        <table class="table table table-striped table-bordered">
+            <tr>
+                <th>
+                    Họ và tên:
+                </th>
+
+                <td>
+                    @Html.DisplayFor(model => model.HOSV) @Html.DisplayFor(model => model.TENSV)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ANHDAIDIEN)
+                </th>
+
+                <td>
+                    @Html.DisplayFor(model => model.ANHDAIDIEN)
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.QUEQUAN)
+                </th>
+
+                <td>
+                    @Html.DisplayFor(model => model.QUEQUAN)
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.NGAYSINHSV)
+                </th>
+
+                <td>
+                    @Html.DisplayFor(model => model.NGAYSINHSV)
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CMNDSV)
+                </th>
+
+                <td>
+                    @Html.DisplayFor(model => model.CMNDSV)
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.DIEM_TBTL)
+                </th>
+
+                <td>
+                    @Html.DisplayFor(model => model.DIEM_TBTL)
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.SDTSV)
+                </th>
+
+                <td>
+                    @Html.DisplayFor(model => model.SDTSV)
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.SDT_PHUHUYNH)
+                </th>
+
+                <td>
+                    @Html.DisplayFor(model => model.SDT_PHUHUYNH)
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.EMAIL)
+                </th>
+
+                <td>
+                    @Html.DisplayFor(model => model.EMAIL)
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.DIACHI_SV)
+                </th>
+
+                <td>
+                    @Html.DisplayFor(model => model.DIACHI_SV)
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.DIACHI_THUONGTRU)
+                </th>
+
+                <td>
+                    @Html.DisplayFor(model => model.DIACHI_THUONGTRU)
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.GIOITINH)
+                </th>
+
+                <td>
+                    @(Html.DisplayFor(model => model.GIOITINH))
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.TRANGTHAISV)
+                </th>
+
+                <td>
+                    @Html.DisplayFor(model => model.TRANGTHAISV)
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Chuyennganh.TENCN)
+                </th>
+
+                <td>
+                    @Html.DisplayFor(model => model.Chuyennganh.TENCN)
+                </td>
+            </tr>
+
+        </table>
+    </div>
+    <p>
+        @Html.ActionLink("Sua", "Sinhvien", new { id = Model.MASV }) |
+        @Html.ActionLink("DanhsachSinhvien", "Sinhvien")
+    </p>
+</div>

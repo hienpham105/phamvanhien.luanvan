@@ -1,0 +1,35 @@
+﻿@model ISchool.Models.Nguoidung
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/MatrixAdmin/AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Nguoidung</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TENND)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENND)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MATKHAU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MATKHAU)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MAND }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

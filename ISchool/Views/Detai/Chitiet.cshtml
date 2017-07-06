@@ -1,0 +1,124 @@
+﻿@model ISchool.Models.Detai
+
+@{
+    ViewBag.Title = "Chi tiết";
+    Layout = "~/Views/Shared/MatrixAdmin/AdminLayout.cshtml";
+}
+
+
+<div id="content-header">
+    <div id="breadcrumb">
+        <a href="@Url.Action("Dashbroad","Home")" title="Go to Home" class="tip-bottom">
+            <i class="icon-home"></i>
+            Home
+        </a>
+        <a href="@Url.Action("DanhsachDetai","Detai")">
+            Đề tài
+        </a>
+        <a href="#">
+            Chi tiết
+        </a>
+    </div>
+</div>
+
+<div class="container-fluid">
+
+    <div>
+        <h4>@Html.DisplayFor(model => model.TENDT)</h4>
+        <hr />
+
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th style="text-align:left;">Tên đề tài</th>
+                <td>@Html.DisplayFor(model => model.TENDT)</td>
+            </tr>
+            <tr>
+                <th style="text-align:left;">Mô tả</th>
+                <td>@Html.Raw(Model.MOTADT ?? "")</td>
+            </tr>
+            <tr>
+                <th style="text-align:left;">
+                    Người đề xuất
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.NGUOIDENGHIDT)
+                </td>
+            </tr>
+            <tr>
+                <th style="text-align:left;">
+                    Trạng thái đề tài:
+                </th>
+
+                <td>
+                    @Html.DisplayFor(model => model.TRANGTHAIDT)
+                </td>
+            </tr>
+            <tr>
+                <th style="text-align:left;">
+                    Ngày hiệu lực:
+                </th>
+
+                <td>
+                    @Html.DisplayFor(model => model.NGAYDTHIEULUC)
+                </td>
+            </tr>
+            <tr>
+                <th style="text-align:left;">
+                    Loại đề tài:
+                </th>
+
+                <td>
+                    @Html.DisplayFor(model => model.LoaiDT.TENLDT)
+                </td>
+            </tr>
+
+        </table>
+    </div>
+    <div>
+        <div class="container">
+            <a href="@Url.Action("Sua", "Detai", new { id = Model.MADT })" class="btn btn-danger">Sửa</a>
+            <a href="@Url.Action("DanhsachDetai", "Detai")" class="btn btn-success">Trở về</a>
+
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Xóa</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <form method="post" action="@Url.Action("Xoa","Detai")">
+                            <input type="hidden" name="id" value="@Model.MADT" />
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Xác nhận xóa</h4>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table table-bordered table-striped">
+                                    <tr>
+                                        <th style="text-align:left;">Tên đề tài</th>
+                                        <td>@Html.DisplayFor(model => model.TENDT)</td>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:left;">Mô tả</th>
+                                        <td>@Html.Raw(Model.MOTADT ?? "")</td>
+                                    </tr>
+                                </table>
+                                <p>Dữ liệu sẽ bị xóa, bạn có chắc chắn?</p>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-danger" >Delete</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

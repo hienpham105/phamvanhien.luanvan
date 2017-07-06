@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5639068b26d54dfc8af0b4248c4eb159" Name="Diagram1">
+        <EntityTypeShape EntityType="ISchoolModel.CT_Phieutheodoi" Width="1.5" PointX="15" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISchoolModel.Chucvu" Width="1.5" PointX="6" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISchoolModel.Chuyennganh" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISchoolModel.Chuyennganh_Monhoc" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISchoolModel.Detai" Width="1.5" PointX="8.25" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISchoolModel.Donvi" Width="1.5" PointX="6" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISchoolModel.Giangvien" Width="1.5" PointX="8.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISchoolModel.Hocvi" Width="1.5" PointX="6" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISchoolModel.Khoa" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISchoolModel.LoaiDT" Width="1.5" PointX="6" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISchoolModel.Monhoc" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISchoolModel.Nguoidung" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISchoolModel.PCD_Tieuchi" Width="1.5" PointX="12.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISchoolModel.Phieuchamdiem" Width="1.5" PointX="10.5" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISchoolModel.Phieugiaodetai" Width="1.5" PointX="10.5" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISchoolModel.Phieutheodoi" Width="1.5" PointX="12.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISchoolModel.Sinhvien" Width="1.5" PointX="5.25" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="ISchoolModel.Tieuchi" Width="1.5" PointX="10.5" PointY="4" IsExpanded="true" />
+        <AssociationConnector Association="ISchoolModel.FK_CT_Phieutheodoi_Phieutheodoi" ManuallyRouted="false" />
+        <AssociationConnector Association="ISchoolModel.FK_CT_Phieutheodoi_Tieuchi" ManuallyRouted="false" />
+        <AssociationConnector Association="ISchoolModel.FK_Giangvien_Chucvu" ManuallyRouted="false" />
+        <AssociationConnector Association="ISchoolModel.FK_Chuyennganh_Khoa" ManuallyRouted="false" />
+        <AssociationConnector Association="ISchoolModel.FK_Chuyennganh_Monhoc_Chuyennganh" ManuallyRouted="false" />
+        <AssociationConnector Association="ISchoolModel.FK_Giangvien_Chuyennganh" ManuallyRouted="false" />
+        <AssociationConnector Association="ISchoolModel.FK_Sinhvien_Chuyennganh" ManuallyRouted="false" />
+        <AssociationConnector Association="ISchoolModel.FK_Chuyennganh_Monhoc_Monhoc" ManuallyRouted="false" />
+        <AssociationConnector Association="ISchoolModel.FK_Detai_LoaiDT" ManuallyRouted="false" />
+        <AssociationConnector Association="ISchoolModel.FK_Phieugiaodetai_Detai" ManuallyRouted="false" />
+        <AssociationConnector Association="ISchoolModel.FK_Giangvien_Donvi" ManuallyRouted="false" />
+        <AssociationConnector Association="ISchoolModel.FK_Giangvien_Hocvi" ManuallyRouted="false" />
+        <AssociationConnector Association="ISchoolModel.FK_Phieuchamdiem_Giangvien" ManuallyRouted="false" />
+        <AssociationConnector Association="ISchoolModel.FK_Phieugiaodetai_Giangvien1" ManuallyRouted="false" />
+        <AssociationConnector Association="ISchoolModel.FK_PCD_Tieuchi_Phieuchamdiem" ManuallyRouted="false" />
+        <AssociationConnector Association="ISchoolModel.FK_PCD_Tieuchi_Tieuchi" ManuallyRouted="false" />
+        <AssociationConnector Association="ISchoolModel.FK_Phieuchamdiem_Phieugiaodetai" ManuallyRouted="false" />
+        <AssociationConnector Association="ISchoolModel.FK_Phieugiaodetai_Sinhvien" ManuallyRouted="false" />
+        <AssociationConnector Association="ISchoolModel.FK_Phieutheodoi_Phieugiaodetai" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,59 @@
+﻿@model ISchool.Models.Phieugiaodetai
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/MatrixAdmin/AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Phieugiaodetai</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ngaygiao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ngaygiao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hannop)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hannop)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sinhvien.HOSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sinhvien.HOSV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Detai.TENDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Detai.TENDT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Giangvien.HOGV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Giangvien.HOGV)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SoPGDT }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

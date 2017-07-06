@@ -1,0 +1,190 @@
+﻿@model ISchool.Models.Giangvien
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/MatrixAdmin/AdminLayout.cshtml";
+}
+
+<div id="content-header">
+    <div id="breadcrumb">
+        <a href="@Url.Action("Dashbroad","Home")" title="Go to Home" class="tip-bottom">
+            <i class="icon-home"></i>
+            Home
+        </a>
+        <a href="@Url.Action("DanhsachGiangvien", "Giangvien")">
+            Giảng viên
+        </a>
+        <a href="#">
+            Chi tiết
+        </a>
+    </div>
+</div>
+
+<div class="container-fluid">
+
+    <div>
+        <h4>
+            @Html.DisplayFor(model => model.HOGV) @Html.DisplayFor(model => model.TENGV)
+        </h4>
+        <hr />
+
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th style="text-align:left;">Quê quán</th>
+                <td>@Html.DisplayFor(model => model.QUEQUAN)</td>
+            </tr>
+            <tr>
+                <th style="text-align:left;">Mô tả</th>
+                <td>@Html.Raw(Model.MOTA ?? "")</td>
+            </tr>
+            <tr>
+                <th style="text-align:left;">
+                    Hình đại diện
+                </th>
+                <td>
+                    <img src="~/Hinhanh/@Html.DisplayFor(model => model.ANHDAIDIEN)" alt="" />
+                </td>
+            </tr>
+            <tr>
+                <th style="text-align:left;">
+                    Số CMND
+                </th>
+
+                <td>
+                    @Html.DisplayFor(model => model.CMND)
+
+                </td>
+            </tr>
+            <tr>
+                <th style="text-align:left;">
+                    Ngày sinh:
+                </th>
+
+                <td>
+                    @Html.DisplayFor(model => model.NGAYSINH)
+                </td>
+            </tr>
+            <tr>
+                <th style="text-align:left;">
+                    Email
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.EMAIL)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Số điện thoại
+                </th>
+                <td>@Html.DisplayFor(model => model.SDT)</td>
+            </tr>
+            <tr>
+                <th>Địa chỉ</th>
+                <td>
+                    @Html.DisplayFor(model => model.DIACHI)
+                </td>
+            </tr>
+            <tr>
+                <th>Giới tính</th>
+                <td>
+                    @Html.DisplayFor(model => model.GIOITINH)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Ngày vào
+                </th>
+                <td>
+                    @Html.DisplayFor(model =>model.CreateDate)
+                </td>
+            </tr>
+            <tr>
+                <th>Trạng thái</th>
+                <td>
+                    @Html.DisplayFor(model => model.TRANGTHAIGV)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Chức vụ
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Chucvu.TENCV)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Chuyên ngành
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Chuyennganh.TENCN)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Đơn vị công tác
+                </th>
+                <td>@Html.DisplayFor(model => model.Donvi.TENDV)</td>
+            </tr>
+            <tr>
+                <th>
+                    Học vị
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Hocvi.TENHV)
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <div class="container">
+            <a href="@Url.Action("Sua", "Giangvien", new { id = Model.MAGV })" class="btn btn-danger">Sửa</a>
+            <a href="@Url.Action("DanhsachGiangvien", "Giangvien")" class="btn btn-success">Trở về</a>
+
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Xóa</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <form method="post" action="@Url.Action("Xoa", "Giangvien")">
+                            <input type="hidden" name="id" value="@Model.MAGV" />
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Xác nhận xóa</h4>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table table-bordered table-striped">
+                                    <tr>
+                                        <th>
+                                            Tên giảng viên
+                                        </th>
+                                        <td>
+                                            @Html.DisplayFor(model => model.HOGV) @Html.DisplayFor(model => model.TENGV)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:left;">Mô tả</th>
+                                        <td>@Html.Raw(Model.MOTA ?? "")</td>
+                                    </tr>
+                                </table>
+                                <p>Dữ liệu sẽ bị xóa, bạn có chắc chắn?</p>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,110 @@
+﻿/*Css cho trang tin tức*/
+.container span {
+    font-size: 13px;
+    line-height: 30px;
+    text-align: justify;
+    font-weight: 300;
+    font-family: Arial;
+}
+
+.container ul li {
+    margin-bottom: 10px;
+}
+
+.w3-padding-16 img {
+    width: 50px;
+}
+
+h6 {
+    font-size: 14px;
+    color: red;
+    font-weight: bold;
+}
+
+hr {
+    border-top: 1px solid #eee;
+    margin-right: 60%;
+}
+
+.w3-ul li {
+    border-bottom: 15px solid #ddd;
+}
+
+.w3-padding-16 img {
+    width: 100px;
+    margin-top: -10px;
+}
+
+.w3-padding-16 a:hover {
+    color: red;
+}
+
+#stylenews {
+    background-image: url('/Content/images/Test/backgroundTintuc_sukien.gif');
+    background-repeat: no-repeat;
+    line-height: 26px;
+    padding-left: 10px;
+}
+/*Kết thúc css trang tin tức*/
+
+/* Style trang chủ trung tâm ngoại ngữ*/
+.boxnews {
+    float: left;
+    width: 49%;
+}
+
+    .boxnews h2 {
+        background: none repeat scroll 0 0 #0072c6;
+        border-radius: 5px 5px 0 0;
+        font-size: 150%;
+        margin: 3px !important;
+        padding: 7px 13px !important;
+        width: 98.4%
+    }
+
+        .boxnews h2 a {
+            color: #fff;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+
+.newslist {
+    border: 1px solid #eceaf3;
+    border-radius: 0 0 5px 5px;
+    height: 195px;
+    margin-bottom: 6px;
+    padding-top: 5px;
+    width: 98.4%;
+    margin-top:-4px;
+    margin-left: 3px;
+    height: auto !important;
+}
+
+.listbox {
+    margin: 0;
+    padding: 8px 12px 5px;
+}
+
+    .listbox h4 {
+        background: url("/Content/images/Test/bulletNews2.gif") no-repeat scroll 0 4px rgba(0, 0, 0, 0);
+        font-size: 15px;
+        font-weight: normal;
+        margin: 0 0 15px !important;
+        padding: 0 12px !important;
+    }
+
+.boxnews h2 a {
+    font-size: 15px;
+}
+
+/*End style trang chủ trung tâm ngoại ngữ*/
+
+/*Style icon trang Thông tin mới*/
+.listboxnew h4 {
+    background: url("/Content/images/Test/bulletNews.png") no-repeat scroll 0 4px rgba(0, 0, 0, 0);
+    font-size: 15px;
+    font-weight: normal;
+    margin: 5px 10px 15px !important;
+    padding: 0 12px !important;
+}
+/*End style icon trang Thông tin mới*/

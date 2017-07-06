@@ -1,0 +1,73 @@
+﻿@model ISchool.Models.Detai
+
+@{
+    ViewBag.Title = "Xoa";
+    Layout = "~/Views/Shared/MatrixAdmin/AdminLayout.cshtml";
+}
+
+<h2>Xoa</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Detai</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TENDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENDT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MOTADT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MOTADT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NGUOIDENGHIDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NGUOIDENGHIDT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TRANGTHAIDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TRANGTHAIDT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NGAYDTHIEULUC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NGAYDTHIEULUC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LoaiDT.TENLDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoaiDT.TENLDT)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

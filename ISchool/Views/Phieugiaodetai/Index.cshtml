@@ -1,0 +1,102 @@
+﻿@model IEnumerable<ISchool.Models.Phieugiaodetai>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/MatrixAdmin/AdminLayout.cshtml";
+}
+
+<div id="content-header">
+    <div id="breadcrumb">
+        <a href="@Url.Action("Dashbroad","Home")" title="Go to Home" class="tip-bottom">
+            <i class="icon-home"></i>
+            Home
+        </a>
+        <a href="@Url.Action("Index","Phieugiaodetai")" class="current">
+            Danh sách sinh viên và đề tài
+        </a>
+    </div>
+</div>
+<div class="container-fluid">
+    <hr>
+    <div>
+        <div>
+            <a href="@Url.Action("Create", "Phieugiaodetai")" class="btn btn-primary">
+                Thêm mới
+            </a>
+        </div>
+        <div style="margin-left: 96px; margin-top: -41px;">
+            <form method="get" action="@Url.Action("Timkiem","Sinhvien")">
+                <input type="text" name="keyword" placeholder="Nhập thông tin cần tìm" style="margin-top: 11px;" />
+                <button type="submit" class="btn btn-primary" style="">
+                    <span><i class="icon-search"></i></span>
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="widget-box">
+                <div class="widget-title">
+                    <span class="icon"><i class="icon-th"></i></span>
+                    <h5>Danh sách</h5>
+                </div>
+                <div class="widget-content nopadding">
+
+
+                    <table class="table table-bordered table-striped">
+                        <tr>
+                            <th>
+                                Ngày nhận
+                            </th>
+                            <th>
+                                Hạn nộp
+                            </th>
+                            <th>
+                                Sinh viên thực hiện
+                            </th>
+                            <th>
+                                Tên đề tài
+                            </th>
+                            <th>
+                                Giảng viên hướng dẫn
+                            </th>
+                            <th></th>
+                        </tr>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Ngaygiao)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Hannop)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Sinhvien.HOSV) @Html.DisplayFor(modelItem => item.Sinhvien.TENSV)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Detai.TENDT)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Giangvien.TENGV) @Html.DisplayFor(modelItem => item.Giangvien.HOGV)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.SoPGDT }) |
+                                    @Html.ActionLink("Details", "Details", new { id = item.SoPGDT }) |
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.SoPGDT })
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+                    <div>
+                        Phân trang
+                        @*@Html.PagedListPager(Model, page => Url.Action("DanhsachGiangvien",
+                            new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

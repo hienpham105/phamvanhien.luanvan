@@ -1,0 +1,448 @@
+﻿<!doctype html>
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><html lang="en" class="no-js"> <![endif]-->
+<html lang="en">
+<head>
+    <!-- Basic -->
+    <title>@ViewBag.Title</title>
+    <!-- Define Charset -->
+    <meta charset="utf-8">
+    <!-- Responsive Metatag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Page Description and Author -->
+    <meta name="description" content="Margo - Responsive HTML5 Template">
+    <meta name="author" content="iThemesLab">
+    <!-- Bootstrap CSS  -->
+    <link rel="stylesheet" href="~/Content/asset/css/bootstrap.min.css" type="text/css" media="screen">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="~/Content/css/font-awesome.min.css" type="text/css" media="screen">
+    <!-- Slicknav -->
+    <link rel="stylesheet" type="text/css" href="~/Content/css/slicknav.css" media="screen">
+    <!-- Margo CSS Styles  -->
+    <link rel="stylesheet" type="text/css" href="~/Content/css/style.css" media="screen">
+    <!-- Responsive CSS Styles  -->
+    <link rel="stylesheet" type="text/css" href="~/Content/css/responsive.css" media="screen">
+    <!-- Css3 Transitions Styles  -->
+    <link rel="stylesheet" type="text/css" href="~/Content/css/animate.css" media="screen">
+    <!-- Color CSS Styles  -->
+    <link rel="stylesheet" type="text/css" href="~/Content/css/colors/red.css" title="red" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/colors/jade.css" title="jade" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/colors/blue.css" title="blue" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/colors/beige.css" title="beige" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/colors/cyan.css" title="cyan" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/colors/green.css" title="green" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/colors/orange.css" title="orange" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/colors/peach.css" title="peach" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/colors/pink.css" title="pink" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/colors/purple.css" title="purple" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/colors/sky-blue.css" title="sky-blue" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/colors/yellow.css" title="yellow" media="screen" />
+
+    <!-- Margo JS  -->
+    <script type="text/javascript" src="~/Scripts/js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/jquery.migrate.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/modernizrr.js"></script>
+    <script type="text/javascript" src="~/Content/asset/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/nivo-lightbox.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/jquery.appear.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/count-to.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/jquery.textillate.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/jquery.lettering.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/jquery.easypiechart.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/jquery.parallax.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/jquery.slicknav.js"></script>
+    <!--[if IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body>
+    <!-- Container -->
+    <div id="container">
+        <!-- Start Header -->
+        <div class="hidden-header"></div>
+        <header class="clearfix">
+            <!-- Start Top Bar -->
+            @*<div class="top-bar">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <!-- Start Contact Info -->
+                                <ul class="contact-details">
+                                    <li>
+                                        Dep trai
+                                    </li>
+                                    <li>
+                                        Qua dep trai
+                                    </li>
+                                </ul>
+                                <!-- End Contact Info -->
+                            </div>
+                            <div class="col-md-5">
+                                <!-- Start Social Links -->
+                                <ul class="social-list">
+                                    <li>
+                                        Program
+                                    </li>
+                                    <li>
+                                        Management
+                                    </li>
+                                </ul>
+                                <!-- End Social Links -->
+                            </div>
+                            }
+                        </div>
+                    </div>
+                </div>*@
+            <!-- End Top Bar -->
+            <!-- Start Header ( Logo & Naviagtion ) -->
+            <div class="navbar navbar-default navbar-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <!-- Stat Toggle Nav Link For Mobiles -->
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <!-- Kích hoạt cho desktop -->
+                        <em class="visible-md visible-lg">
+                            <a class="navbar-brand" href="#"><img alt="" src="~/Content/images/Test/logo.png"></a>
+                        </em>
+                        <!-- Kích hoạt cho điện thoại -->
+                        <em class="visible-xs">
+                            <a class="navbar-brand" href="index.html"><img alt="" src="~/Content/images/Test/LogoMobile.gif"></a>
+                        </em>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <!-- Stat Search -->
+                        <div class="search-side">
+                            <a class="show-search"><i class="fa fa-search"></i></a>
+                            <div class="search-form">
+                                <form autocomplete="off" role="search" method="get" class="searchform" action="#">
+                                    <input type="text" value="" name="s" id="s" placeholder="Nhập từ khóa cần tìm">
+                                </form>
+                            </div>
+                        </div>
+                        <!-- End Search -->
+                        <!-- Start Navigation List -->
+                        <b>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a class="active" href="#">TRANG CHỦ</a>
+                                    <ul class="dropdown">
+                                        <li><a class="active" href="http://hutech.edu.vn">Trang chủ HUTECH</a></li>
+                                        <li><a href="#">Trang chủ VIỆN</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">GIỚI THIỆU</a>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Giới thiệu viện</a></li>
+                                        <li><a href="#">Cơ cấu tổ chức</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">ĐÀO TẠO</a>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Ngoại ngữ</a></li>
+                                        <li><a href="#">Tin học</a></li>
+                                        <li><a href="#">Kỹ năng mềm</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">TRUNG TÂM</a>
+                                    <ul class="dropdown">
+                                        <li><a href="#">TT Ngoại ngữ</a></li>
+                                        <li><a href="#">TT Tin học</a></li>
+                                        <li><a href="#">TT Kỹ năng</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">SINH VIÊN</a>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Thông báo</a></li>
+                                        <li><a href="#">Thời khóa biểu</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">TIN TỨC</a>
+                                </li>
+                                <li><a href="#">LIÊN HỆ</a></li>
+                            </ul>
+                            <!-- End Navigation List -->
+                        </b>
+                    </div>
+                </div>
+                <!-- Mobile Menu Start -->
+                <ul class="wpb-mobile-menu">
+                    <li>
+                        <a class="active" href="index.html">TRANG CHỦ</a>
+                        <ul class="dropdown">
+                            <li><a class="active" href="http://hutech.edu.vn">Trang chủ HUTECH</a></li>
+                            <li><a href="#">Trang chủ VIỆN</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="about.html">GIỚI THIỆU</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Giới thiệu viện</a></li>
+                            <li><a href="#">Cơ cấu tổ chức</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">ĐÀO TẠO</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Ngoại ngữ</a></li>
+                            <li><a href="#">Tin học</a></li>
+                            <li><a href="#">Kỹ năng mềm</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="portfolio-3.html">TRUNG TÂM</a>
+                        <ul class="dropdown">
+                            <li><a href="#">TT Ngoại ngữ</a></li>
+                            <li><a href="#">TT Tin học</a></li>
+                            <li><a href="#">TT Kỹ năng</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="blog.html">SINH VIÊN</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Thông báo</a></li>
+                            <li><a href="#">Thời khóa biểu</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">TIN TỨC</a>
+                    </li>
+                    <li><a href="#">LIÊN HỆ</a></li>
+                </ul>
+                <!-- Mobile Menu End -->
+            </div>
+
+
+            <!-- End Header ( Logo & Naviagtion ) -->
+        </header>
+        <!-- End Header -->
+        @RenderBody()
+        <!-- Start Footer -->
+        <footer>
+
+            <div class="container">
+                <div class="row footer-widgets">
+
+                    <div class="col-md-3">
+                        <div class="footer-widget social-widget">
+                            <ul class="social-icons">
+                                <li>
+                                    Luận văn tốt nghiệp 2017 &copy;
+                                </li>
+                                <li>
+                                    Phạm Văn Hiền - 1311060556
+                                </li>
+                                <li>
+                                    Lâm Trường Giang - 1311060511
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- .col-md-3 -->
+                    <!-- End Subscribe & Social Links Widget -->
+                    <!-- Start Twitter Widget -->
+
+                    <div class="col-md-3">
+                        <div class="footer-widget twitter-widget">
+                            <ul>
+                                <li>
+                                    Trang chủ
+                                </li>
+                                <li>
+                                    Giới thiệu
+                                </li>
+                                <li>
+                                    Đào tạo
+                                </li>
+                                <li>
+                                    Giảng viên
+                                </li>
+                                <li>
+                                    Sinh viên
+                                </li>
+                                <li>
+                                    Tin tức
+                                </li>
+                                <li>
+                                    Liên hệ
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-widget flickr-widget">
+                            <div class="iframe-container">
+                                <ul>
+                                    <li>
+                                        Đại học công nghệ TP.HCM
+                                    </li>
+                                    <li>
+                                       Trụ sở : 475A Điện Biên Phủ, P.25, Q.Bình Thạnh, TP.HCM
+                                    </li>
+                                    <li>
+                                       Cơ sở 475B : 475B Điện Biên Phủ, P.25, Q.Bình Thạnh, TP.HCM
+                                    </li>
+                                    <li>
+                                        Cơ sở Ung Văn Khiêm : 31/36 Ung Văn Khiêm, P.25, Q.Bình Thạnh, TP.HCM
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="footer-widget contact-widget">
+                            <p>
+                                ĐT: (028) 5445 7777
+                            </p>
+                            <p>
+                                Fax: (028) 5445 4444
+                            </p>
+                            <p>
+                                Email: hutech@hutech.edu.vn
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <style type="text/css">
+                .iframe-container {
+                    position: relative;
+                    width: 100%;
+                    padding-bottom: 56.25%;
+                }
+
+                    .iframe-container > * {
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        margin: 0;
+                        padding: 0;
+                        height: 100%;
+                        width: 100%;
+                    }
+            </style>
+        </footer>
+
+
+        <!-- End Footer -->
+    </div>
+    <!-- End Container -->
+    <!-- Go To Top Link -->
+    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+    <!-- Style Switcher -->
+    <div class="switcher-box">
+        <a class="open-switcher show-switcher"><i class="fa fa-cog fa-2x"></i></a>
+        <h4>Style Switcher</h4>
+        <span>12 Predefined Color Skins</span>
+        <ul class="colors-list">
+            <li>
+                <a onclick="setActiveStyleSheet('blue'); return false;" title="Blue" class="blue"></a>
+            </li>
+            <li>
+                <a onclick="setActiveStyleSheet('sky-blue'); return false;" title="Sky Blue" class="sky-blue"></a>
+            </li>
+            <li>
+                <a onclick="setActiveStyleSheet('cyan'); return false;" title="Cyan" class="cyan"></a>
+            </li>
+            <li>
+                <a onclick="setActiveStyleSheet('jade'); return false;" title="Jade" class="jade"></a>
+            </li>
+            <li>
+                <a onclick="setActiveStyleSheet('green'); return false;" title="Green" class="green"></a>
+            </li>
+            <li>
+                <a onclick="setActiveStyleSheet('purple'); return false;" title="Purple" class="purple"></a>
+            </li>
+            <li>
+                <a onclick="setActiveStyleSheet('pink'); return false;" title="Pink" class="pink"></a>
+            </li>
+            <li>
+                <a onclick="setActiveStyleSheet('red'); return false;" title="Red" class="red"></a>
+            </li>
+            <li>
+                <a onclick="setActiveStyleSheet('orange'); return false;" title="Orange" class="orange"></a>
+            </li>
+            <li>
+                <a onclick="setActiveStyleSheet('yellow'); return false;" title="Yellow" class="yellow"></a>
+            </li>
+            <li>
+                <a onclick="setActiveStyleSheet('peach'); return false;" title="Peach" class="peach"></a>
+            </li>
+            <li>
+                <a onclick="setActiveStyleSheet('beige'); return false;" title="Biege" class="beige"></a>
+            </li>
+        </ul>
+        <span>Top Bar Color</span>
+        <select id="topbar-style" class="topbar-style">
+            <option value="1">Light (Default)</option>
+            <option value="2">Dark</option>
+            <option value="3">Color</option>
+        </select>
+        <span>Layout Style</span>
+        <select id="layout-style" class="layout-style">
+            <option value="1">Wide</option>
+            <option value="2">Boxed</option>
+        </select>
+        <span>Patterns for Boxed Version</span>
+        <ul class="bg-list">
+            <li>
+                <a href="#" class="bg1"></a>
+            </li>
+            <li>
+                <a href="#" class="bg2"></a>
+            </li>
+            <li>
+                <a href="#" class="bg3"></a>
+            </li>
+            <li>
+                <a href="#" class="bg4"></a>
+            </li>
+            <li>
+                <a href="#" class="bg5"></a>
+            </li>
+            <li>
+                <a href="#" class="bg6"></a>
+            </li>
+            <li>
+                <a href="#" class="bg7"></a>
+            </li>
+            <li>
+                <a href="#" class="bg8"></a>
+            </li>
+            <li>
+                <a href="#" class="bg9"></a>
+            </li>
+            <li>
+                <a href="#" class="bg10"></a>
+            </li>
+            <li>
+                <a href="#" class="bg11"></a>
+            </li>
+            <li>
+                <a href="#" class="bg12"></a>
+            </li>
+            <li>
+                <a href="#" class="bg13"></a>
+            </li>
+            <li>
+                <a href="#" class="bg14"></a>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="~/Scripts/js/script.js"></script>
+</body>
+</html>

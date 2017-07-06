@@ -1,0 +1,44 @@
+﻿@model ISchool.Models.Nguoidung
+@{
+    ViewBag.Title = "Đăng nhập";
+    Layout = "~/Views/Shared/MatrixAdmin/LoginMatrix.cshtml";
+}
+
+<div id="loginbox">
+    <form id="loginform" class="form-vertical" method="post" action="@Url.Action("Login","Home")">
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        <div class="control-group normal_text"> <h3><img src="~/Hinhanh/no-image.png" alt="Logo" style="width: 161px; height: 126px;" /></h3></div>
+        <h2 style="text-align:center;color:red;">WELLCOME TO HUTECH</h2>
+        <div class="control-group">
+            <div class="controls">
+                <div class="main_input_box">
+                    <span class="add-on bg_lg"><i class="icon-user"> </i></span>
+                    @*@Html.TextBoxFor(a => a.TENND)
+                    @Html.ValidationMessageFor(a => a.TENND)*@
+                    <input id="TENND" name="TENND" type="text" placeholder="Tên đăng nhập">
+                </div>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <div class="main_input_box">
+                    <span class="add-on bg_ly"><i class="icon-lock"></i></span>
+                    @*@Html.PasswordFor(a => a.MATKHAU)
+                    @Html.ValidationMessageFor(a => a.MATKHAU)*@
+                    <input id="MATKHAU" name="MATKHAU" type="password" placeholder="Mật khẩu">
+                </div>
+            </div>
+        </div>
+        <div class="form-actions">
+            <span class="pull-left">
+                <input type="submit" value="Quên Mật Khẩu" class="btn btn-danger" id="to-recover" style="border-radius: 6px;"/>
+            </span>
+            <span class="pull-right">
+                <input type="submit" value="Đăng Nhập" class="btn btn-success" style="border-radius: 6px;"/>
+            </span>
+        </div>
+    </form>
+</div>
+
+

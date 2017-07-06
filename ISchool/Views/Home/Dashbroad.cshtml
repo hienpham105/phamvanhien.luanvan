@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Dashbroad";
+    Layout = "~/Views/Shared/MatrixAdmin/Dashbroad.cshtml";
+}
+
+<h2>Dashbroad</h2>
+<fieldset>
+    @if (Session["TENDN"] != null)
+    {
+        <text>
+            Welcome @Session["TENDN"].ToString()
+        </text>
+    }
+</fieldset>
